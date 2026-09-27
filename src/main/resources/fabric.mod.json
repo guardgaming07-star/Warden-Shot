@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "modid",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Warden Shot Mod",
+	"description": "Adds a server-sided Warden Shot fishing rod ability command.",
 	"authors": [
 		"Me!"
 	],
@@ -13,25 +13,18 @@
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
 		"main": [
 			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.client.ExampleModClient"
 		]
 	},
 	"mixins": [
-		"modid.mixins.json",
-		{
-			"config": "modid.client.mixins.json",
-			"environment": "client"
-		}
+		"modid.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.19.5",
-		"minecraft": "~26.3",
+		"minecraft": "~1.21.11",
 		"java": ">=25",
 		"fabric-api": "*"
 	}
